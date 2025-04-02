@@ -29,22 +29,44 @@ Este proyecto está diseñado para apoyar en la consulta recurrente de informaci
 En el archivo **API_BANXICO.bas** se puede encontrar el Módulo de VBA que contiene el código para utilizar la API de Banxico. 
 
 Este código se puede dividir en tres secciones. 
-En la primera se declara el **Token** como una constante.
+- En la primera se declara el **Token** como una constante.
 
-    Private Const banxico_token As String = "[Token]"
+      Private Const banxico_token As String = "[Token]"
 <br>
 
-En la segunda parte se construye una función que realiza el procedimiento de consulta y almacenamiento de información. Esta función depende de una única variable (_"serie"_), la cual se define en la subrutina.
+- En la segunda parte se construye una función que realiza el procedimiento de consulta y almacenamiento de información. Esta función depende de una única variable (_"serie"_), la cual se define en la subrutina.
 
-    Function API_BANXICO(serie)
+      Function API_BANXICO(serie)
 <br>
 
-En la última sección se crea una subrutina donde se declara a la variable _"serie"_ y se utiliza como insumo en la función. Posteriormente se imprimen los datos en Excel.  
+Una particularidad de la API de BANXICO es que se puede seleccionar un rango de tiempo para hacer la consulta de datos. En el código declaré que las fechas las obtenga de las celdas "D6" (fecha inicial) y "D7" (fecha final).
+      
+    fecha_inicio = Format(Range("D6").Value, "YYYY-MM-DD")
+    fecha_fin = Format(Range("D7").Value, "YYYY-MM-DD")
 
-    Sub peso_dolar()
+Un ejemplo de la vista en Excel sería la siguiente:
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/a00dba7b-5322-4b8e-b110-f4cd95b1579d" alt="ejemplo1" width="650"> </p>
+
+
+Otra opción es dejar fija la fecha inicial de consulta escribiendo directamente sobre el código:
+    
+    fecha_inicio = "2020-01-01"    'por ejemplo
+
+Para la fecha final de consulta se puede usar la función "Date" sobre el código de VBA o la función "=Hoy( )" sobre la casilla de excel para obtener el dato disponible más reciente:
+    
+    fecha_fin = Date    'por ejemplo    
+    
+Pero esta decisión depende exclusivamente de las preferencias del usuario.  
+
 <br>
 
-La lógica del código permite aumentar el número de consultas al declarar una lista con claves que junto con un ciclo for permitirá realizar varias consultas de información.
+- En la última sección se crea una subrutina donde se declara a la variable _"serie"_ y se utiliza como insumo en la función. Posteriormente se imprimen los datos en Excel.  
+
+      Sub peso_dolar()
+<br>
+
+La lógica del código permite aumentar el número de consultas al declarar una lista con claves que junto con un ciclo _for_ permitirá realizar varias consultas de información.
 
 También es posible crear varias subrutinas que se pueden ejecutar en distintas hojas de Excel. Se puede insertar un botón con la macro asignada y realizar las consultas repetidas veces.
 
@@ -57,6 +79,11 @@ También es posible crear varias subrutinas que se pueden ejecutar en distintas 
 
 
 Todo depende de las necesidades del proyecto o de las especificaciones de los usuarios para hacerlo más fácil de manejar. 
+
+El resultado esperado es la serie de datos en el espacio seleccionado:
+<p align="center"> <img src="https://github.com/user-attachments/assets/2a37ae6a-cf64-42f8-8cc4-5dca7138d763" alt="ejemplo2" width="1200"> </p>
+*Nota: algunas filas se ocultaron para hacer visible el dato inicial y el dato final de la consulta.
+<br>
 
 ---
 
