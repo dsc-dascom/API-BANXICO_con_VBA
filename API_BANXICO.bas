@@ -14,13 +14,13 @@ Function API_banxico(serie)
     fecha_fin = Format(Range("D7").Value, "YYYY-MM-DD") ' "2025-01-01"      'Date
     
     'url de consulta, revisar los parametros en la pagina de SIE-API
-    Url = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/" & serie & "/datos/" & fecha_inicio & "/" & fecha_fin & "?mediaType=xml"
+    url = "https://www.banxico.org.mx/SieAPIRest/service/v1/series/" & serie & "/datos/" & fecha_inicio & "/" & fecha_fin & "?mediaType=xml"
 
     'declaramos el objeto para hacer la conexion
     Set solicitud = CreateObject("MSXML2.ServerXMLHTTP")
     
     'establecemos la conexion
-    solicitud.Open "GET", Url, False
+    solicitud.Open "GET", url, False
     
     'establecemos el encabezados de la solicitud, el cual contiene el token
     solicitud.setRequestHeader "Bmx-Token", banxico_token
