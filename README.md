@@ -24,9 +24,9 @@ Este proyecto está diseñado para apoyar en la consulta recurrente de informaci
 ---
 
 
-## **Uso de Module1**    :package:
+## **Uso de API_BANXICO.bas**    :package:
 
-En el archivo **Module1.bas** se puede encontrar el Módulo de VBA que contiene el código para utilizar la API de Banxico. 
+En el archivo **API_BANXICO.bas** se puede encontrar el Módulo de VBA que contiene el código para utilizar la API de Banxico. 
 
 Este código se puede dividir en tres secciones. 
 En la primera se declara el **Token** como una constante.
