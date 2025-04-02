@@ -91,6 +91,6 @@ El resultado esperado es la serie de datos en el espacio seleccionado:
 
 - Optimizar y automatizar la consulta de información que está disponible en las bases de datos del Banco de México.
   
-- Facilitar la comprensión de métodos y objetos en VBA para el uso de la API de BANXICO.
+- Facilitar la comprensión de métodos y objetos en VBA para el uso de la API de banxico.
   
 - Construir un código que sirva como base para un proyecto que involucre analizar las condiciones económicas de México con información disponible del Banco de México.
