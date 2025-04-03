@@ -1,7 +1,7 @@
 Attribute VB_Name = "API_BANXICO"
 
 'declaramos el token como constante
-Public Const banxico_token As String = "[Token]"
+Private Const banxico_token As String = "[Token]"
 
 Function API_banxico(serie)
 
