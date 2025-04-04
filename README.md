@@ -20,7 +20,14 @@ Este proyecto está diseñado para apoyar en la consulta recurrente de informaci
 - Si quieren visitar el portal de información de Banxico pueden acceder dando clic en --> [SIE Banxico]( https://www.banxico.org.mx/SieInternet/). 
 
 - En el código se utilizan algunos objetos dentro de MSXML2 para trabajar con los datos en formato XML. Para más información dejo a su disposición las siguientes páginas: [ServerXMLHTTP](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms762278(v=vs.85)), [DOMDocument](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms757828(v=vs.85)), y en especial [.setRequestHeader]( https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms764715(v=vs.85)).
-  
+
+<br>
+
+**IMPORTANTE:** para poder trabajar con los objetos que se declaran en el código, es indispensable habilitar la referencia **Microsoft XML, v6.0** de la pestaña de herramientas (Tools) dentro de VBA.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/72cf2a48-960e-49d3-90e2-7cd54db54320" alt="ejemplo2" width="650"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/81b02e24-eb84-4602-be7f-b535f4ad26ec" alt="ejemplo2" width="400"> </p>
+
 ---
 
 
@@ -69,9 +76,16 @@ Pero esta decisión depende exclusivamente de las preferencias del usuario.
 
       Sub peso_dolar()
 
-Para consultar las series disponibles pueden revisar el [Catálogo de Series](https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries) que se encuentra en el SIE-API (primer link en la documentación), o también pueden revisar la serie de los datos dando clic en el símbolo de información.
+Para consultar las series disponibles pueden revisar el [Catálogo de Series](https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries) que se encuentra en el SIE-API (primer link en la documentación), o también pueden revisar el símbolo de información que se encuentra a la izquierda de los datos dentro del [SIE](https://www.banxico.org.mx/SieInternet/).
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/809886d7-3984-4193-b042-86663180aa54" alt="ejemplo1" width="650"> </p>
+
+
+Por lo tanto, una vez declarado el **Token** y la _serie_ dentro del código, se puede consultar la información usando la API de Banxico. A continuación presento un ejemplo del resultado.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/2a37ae6a-cf64-42f8-8cc4-5dca7138d763" alt="ejemplo2" width="1200"> </p>
+
+*Nota: algunas filas se ocultaron para hacer visible el dato inicial y el dato final de la consulta.
 
 <br>
 
@@ -87,9 +101,6 @@ También es posible crear varias subrutinas que se pueden ejecutar en distintas 
 
 Todo depende de las necesidades del proyecto o de las especificaciones de los usuarios para hacerlo más fácil de manejar. 
 
-El resultado esperado es la serie de datos en el espacio seleccionado:
-<p align="center"> <img src="https://github.com/user-attachments/assets/2a37ae6a-cf64-42f8-8cc4-5dca7138d763" alt="ejemplo2" width="1200"> </p>
-*Nota: algunas filas se ocultaron para hacer visible el dato inicial y el dato final de la consulta.
 
 <br>
 
