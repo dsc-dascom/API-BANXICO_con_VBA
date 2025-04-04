@@ -17,7 +17,7 @@ Este proyecto está diseñado para apoyar en la consulta recurrente de informaci
 - De igual forma, en el siguiente link se puede solicitar el **Token**:
   https://www.banxico.org.mx/SieAPIRest/service/v1/token
 
-- Si quieren visitar el portal de información de Banxico pueden acceder dando clic aquí --> [SIE Banxico]( https://www.banxico.org.mx/SieInternet/). 
+- Si quieren visitar el portal de información de Banxico pueden acceder dando clic en --> [SIE Banxico]( https://www.banxico.org.mx/SieInternet/). 
 
 - En el código se utilizan algunos objetos dentro de MSXML2 para trabajar con los datos en formato XML. Para más información dejo a su disposición las siguientes páginas: [ServerXMLHTTP](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms762278(v=vs.85)), [DOMDocument](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms757828(v=vs.85)), y en especial [.setRequestHeader]( https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms764715(v=vs.85)).
   
@@ -29,15 +29,19 @@ Este proyecto está diseñado para apoyar en la consulta recurrente de informaci
 En el archivo **API_BANXICO.bas** se puede encontrar el Módulo de VBA que contiene el código para utilizar la API de Banxico. 
 
 Este código se puede dividir en tres secciones. 
-- En la primera se declara el **Token** como una constante.
+- En la primera parte se declara el **Token** como una constante privada, lo que permite que esté dispónible a lo largo de todo el módulo.
 
       Private Const banxico_token As String = "[Token]"
+
+El **Token** es necesario para poder hacer las consultas de información. Para obtenerlo pueden ingresar al segundo link de la sección de documentación. Una vez en la página, simplemente deben escribir las letras que aparecen en la imagen de seguridad y podrán generar el **Token**.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/14cc511a-a47a-459d-ab92-838cc7956156" alt="ejemplo1" width="650"> </p>
+
 <br>
 
-- En la segunda parte se construye una función que realiza el procedimiento de consulta y almacenamiento de información. Esta función depende de una única variable (_"serie"_), la cual se define en la subrutina.
+- En la segunda parte se construye una función que realiza el procedimiento de consulta y almacenamiento de información. Esta función depende de una única variable (_"serie"_), la cual se define en la subrutina posterior.
 
       Function API_BANXICO(serie)
-<br>
 
 Una particularidad de la API de BANXICO es que se puede seleccionar un rango de tiempo para hacer la consulta de datos. En el código declaré que las fechas las obtenga de las celdas "D6" (fecha inicial) y "D7" (fecha final).
       
@@ -64,18 +68,21 @@ Pero esta decisión depende exclusivamente de las preferencias del usuario.
 - En la última sección se crea una subrutina donde se declara a la variable _"serie"_ y se utiliza como insumo en la función. Posteriormente se imprimen los datos en Excel.  
 
       Sub peso_dolar()
+
+Para consultar las series disponibles pueden revisar el [Catálogo de Series](https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries) que se encuentra en el SIE-API (primer link en la documentación), o también pueden revisar la serie de los datos dando clic en el símbolo de información.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/809886d7-3984-4193-b042-86663180aa54" alt="ejemplo1" width="650"> </p>
+
 <br>
 
-La lógica del código permite aumentar el número de consultas al declarar una lista con claves que junto con un ciclo _for_ permitirá realizar varias consultas de información.
+La lógica del código permite aumentar el número de consultas al declarar una lista de series que junto con un ciclo _for_ permitirá realizar varias consultas de información.
 
 También es posible crear varias subrutinas que se pueden ejecutar en distintas hojas de Excel. Se puede insertar un botón con la macro asignada y realizar las consultas repetidas veces.
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/ac566bad-3aab-438f-9b2a-001064d44b63" alt="ejemplo1" width="400"> </p>
-<br>
 
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/6aceabad-4a4d-47d2-a3fb-e992643068f5" alt="ejemplo2" width="400"> </p>
-<br>
 
 
 Todo depende de las necesidades del proyecto o de las especificaciones de los usuarios para hacerlo más fácil de manejar. 
@@ -83,6 +90,7 @@ Todo depende de las necesidades del proyecto o de las especificaciones de los us
 El resultado esperado es la serie de datos en el espacio seleccionado:
 <p align="center"> <img src="https://github.com/user-attachments/assets/2a37ae6a-cf64-42f8-8cc4-5dca7138d763" alt="ejemplo2" width="1200"> </p>
 *Nota: algunas filas se ocultaron para hacer visible el dato inicial y el dato final de la consulta.
+
 <br>
 
 ---
