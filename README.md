@@ -14,10 +14,9 @@ Este proyecto está diseñado para apoyar en la consulta recurrente de informaci
 ## **Documentación**   :open_file_folder:
 - Recomiendo revisar la página de Banxico que explica aspectos relevantes de su API, como los parámetros de la consulta: https://www.banxico.org.mx/SieAPIRest/service/v1/
 
-- De igual forma, en el siguiente link se puede solicitar el **Token**:
-  https://www.banxico.org.mx/SieAPIRest/service/v1/token
+- De igual forma, en el siguiente link se puede solicitar el **Token**: https://www.banxico.org.mx/SieAPIRest/service/v1/token
 
-- Si quieren visitar el portal de información de Banxico pueden acceder dando clic en --> [SIE Banxico]( https://www.banxico.org.mx/SieInternet/). 
+- Si quieren visitar el Sistema de Información Económica (SIE) de Banxico, pueden acceder dando clic en --> [SIE Banxico]( https://www.banxico.org.mx/SieInternet/). 
 
 - En el código se utilizan algunos objetos dentro de MSXML2 para trabajar con los datos en formato XML. Para más información dejo a su disposición las siguientes páginas: [ServerXMLHTTP](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms762278(v=vs.85)), [DOMDocument](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms757828(v=vs.85)), y en especial [.setRequestHeader]( https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms764715(v=vs.85)).
 
