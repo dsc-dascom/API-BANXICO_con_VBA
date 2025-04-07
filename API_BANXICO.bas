@@ -3,7 +3,7 @@ Attribute VB_Name = "API_BANXICO"
 'declaramos el token como constante
 Private Const banxico_token As String = "[Token]"
 
-Function API_banxico(serie)
+Function API_BANXICO(serie)
 
     'esta funcion ejecuta la peticion de los datos mediante la API
 
@@ -36,7 +36,7 @@ Function API_banxico(serie)
     'MsgBox solicitud.responseText
 
     'filtramos la respuesta y la guardamos como el resultado de la funcion
-    Set API_banxico = respuesta.getElementsByTagName("Obs")
+    Set API_BANXICO = respuesta.getElementsByTagName("Obs")
     
     'borramos los datos guardados en la solicitud y repuesta
     Set solicitud = Nothing
@@ -51,7 +51,7 @@ Sub peso_dolar()
 serie = "SF63528"
 
 'llamamos a la funcion
-Set observaciones = API_banxico(serie)
+Set observaciones = API_BANXICO(serie)
 
 'escribimos los datos
 i = 12  'comenzamos en la fila 12
