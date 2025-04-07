@@ -56,7 +56,7 @@ Set observaciones = API_banxico(serie)
 'escribimos los datos
 i = 12  'comenzamos en la fila 12
 For Each obs In observaciones
-    fecha = CDate(obs.SelectSingleNode("fecha").Text) 'convertimos los datos a fechas
+    fecha = CDate(obs.SelectSingleNode("fecha").Text)     'convertimos los datos a fechas
     dato = obs.SelectSingleNode("dato").Text
     
     Range("C" & i).Value = fecha
@@ -66,7 +66,7 @@ For Each obs In observaciones
 Next obs
 
 Range("A2").Select
-MsgBox ("Consulta de datos del Tipo de Cambio exitosa")
+MsgBox ("Consulta de los datos del Tipo de Cambio exitosa")
     
 End Sub
 
