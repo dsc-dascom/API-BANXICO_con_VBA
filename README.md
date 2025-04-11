@@ -112,3 +112,31 @@ Todo depende de las necesidades del proyecto o de las especificaciones de los us
 - Facilitar la comprensión de métodos y objetos en VBA para el uso de la API de banxico.
   
 - Construir un código que sirva como base para un proyecto que involucre analizar las condiciones económicas de México con información disponible del Banco de México.
+
+---
+
+## Video de apoyo   :computer:
+
+Como una explicación adicional, he subido un video a YouTube en el que platico [cómo usar el código en VBA](https://youtu.be/kp6uFlxf7lU) para obtener información económica del Banco de México a través de su API. 
+Espero que de esta forma puedan aclararse algunas dudas sobre cómo cargar el módulo **API_BANXICO.bas** así como dónde se deben declarar las variables. Además, en el video encontraran ejemplos de la consulta de información para el Tipo de Cambio, las Reservas Internacionales y los Usos de los Recursos Financieros en la Economía.
+
+cualquier comentario, pregunta o sugerencia son bien recibidas para mejorar el contenido de este proyecto. 
+
+<br>
+
+<p align="center">
+  <a href="https://www.youtube.com/@dsc-econ">
+    <img src="https://github.com/user-attachments/assets/ea03e075-5617-4d87-a1a1-09d49854da74" alt="yt_canal" width="400">
+  </a>
+</p>
+
+<br>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/daniel-salmoran">
+    <img src="https://github.com/user-attachments/assets/b944e977-6ca1-44e5-b7b5-631e19a4f4ba" alt="linkedin_page" width="400">
+  </a>
+</p>
+
+<br>
+
