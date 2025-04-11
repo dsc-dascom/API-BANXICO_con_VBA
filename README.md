@@ -120,7 +120,7 @@ Todo depende de las necesidades del proyecto o de las especificaciones de los us
 Como una explicación adicional, he subido un video a YouTube en el que platico [cómo usar el código en VBA](https://youtu.be/kp6uFlxf7lU) para obtener información económica del Banco de México a través de su API. 
 Espero que de esta forma puedan aclararse algunas dudas sobre cómo cargar el módulo **API_BANXICO.bas** así como dónde se deben declarar las variables. Además, en el video encontraran ejemplos de la consulta de información para el Tipo de Cambio, las Reservas Internacionales y los Usos de los Recursos Financieros en la Economía.
 
-cualquier comentario, pregunta o sugerencia son bien recibidas para mejorar el contenido de este proyecto. 
+Cualquier comentario, pregunta o sugerencia son bien recibidas para mejorar el contenido de este proyecto. 
 
 <br>
 
