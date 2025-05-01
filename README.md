@@ -6,7 +6,7 @@ Este proyecto está diseñado para apoyar en la consulta recurrente de informaci
 
 ---
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/93387aa8-816f-49dc-b03c-9f83703210c9" alt="Logo Banxico" width="600"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/93387aa8-816f-49dc-b03c-9f83703210c9" alt="Banxico_Logo" width="600"> </p>
 
 
 ---
@@ -24,8 +24,8 @@ Este proyecto está diseñado para apoyar en la consulta recurrente de informaci
 
 **IMPORTANTE:** para poder trabajar con los objetos que se declaran en el código, es indispensable habilitar la referencia **Microsoft XML, v6.0** de la pestaña de herramientas (Tools) dentro de VBA.
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/72cf2a48-960e-49d3-90e2-7cd54db54320" alt="ejemplo2" width="650"> </p>
-<p align="center"> <img src="https://github.com/user-attachments/assets/81b02e24-eb84-4602-be7f-b535f4ad26ec" alt="ejemplo2" width="400"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/72cf2a48-960e-49d3-90e2-7cd54db54320" alt="imagen1" width="650"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/81b02e24-eb84-4602-be7f-b535f4ad26ec" alt="imagen2" width="400"> </p>
 
 ---
 
@@ -41,7 +41,7 @@ Este código se puede dividir en tres secciones.
 
 El **Token** es necesario para poder hacer las consultas de información. Para obtenerlo pueden ingresar al segundo link de la sección de documentación. Una vez en la página, simplemente deben escribir las letras que aparecen en la imagen de seguridad y podrán generar el **Token**.
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/14cc511a-a47a-459d-ab92-838cc7956156" alt="ejemplo1" width="650"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/14cc511a-a47a-459d-ab92-838cc7956156" alt="imagen3" width="650"> </p>
 
 <br>
 
@@ -56,7 +56,7 @@ Una particularidad de la API de BANXICO es que se puede seleccionar un rango de 
 
 Un ejemplo de la vista en Excel sería la siguiente:
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/a00dba7b-5322-4b8e-b110-f4cd95b1579d" alt="ejemplo1" width="650"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/a00dba7b-5322-4b8e-b110-f4cd95b1579d" alt="imagen4" width="650"> </p>
 
 
 Otra opción es dejar fija la fecha inicial de consulta escribiendo directamente sobre el código:
@@ -77,12 +77,12 @@ Pero esta decisión depende exclusivamente de las preferencias del usuario.
 
 Para consultar las series disponibles pueden revisar el [Catálogo de Series](https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries) que se encuentra en el SIE-API (primer link en la documentación), o también pueden revisar el símbolo de información que se encuentra a la izquierda de los datos dentro del [SIE](https://www.banxico.org.mx/SieInternet/).
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/809886d7-3984-4193-b042-86663180aa54" alt="ejemplo1" width="650"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/809886d7-3984-4193-b042-86663180aa54" alt="imagen5" width="650"> </p>
 
 
 Por lo tanto, una vez declarado el **Token** y la _serie_ dentro del código, se puede consultar la información usando la API de Banxico. A continuación presento un ejemplo del resultado.
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/2a37ae6a-cf64-42f8-8cc4-5dca7138d763" alt="ejemplo2" width="1200"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/2a37ae6a-cf64-42f8-8cc4-5dca7138d763" alt="imagen6" width="1200"> </p>
 
 *Nota: algunas filas se ocultaron para hacer visible el dato inicial y el dato final de la consulta.
 
@@ -92,10 +92,10 @@ La lógica del código permite aumentar el número de consultas al declarar una 
 
 También es posible crear varias subrutinas que se pueden ejecutar en distintas hojas de Excel. Se puede insertar un botón con la macro asignada y realizar las consultas repetidas veces.
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/ac566bad-3aab-438f-9b2a-001064d44b63" alt="ejemplo1" width="400"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/ac566bad-3aab-438f-9b2a-001064d44b63" alt="imagen7" width="400"> </p>
 
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/6aceabad-4a4d-47d2-a3fb-e992643068f5" alt="ejemplo2" width="400"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/6aceabad-4a4d-47d2-a3fb-e992643068f5" alt="imagen8" width="400"> </p>
 
 
 Todo depende de las necesidades del proyecto o de las especificaciones de los usuarios para hacerlo más fácil de manejar. 
